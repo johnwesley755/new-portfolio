@@ -25,7 +25,7 @@ const Navbar: React.FC = () => {
         <div className="container mx-auto px-6 py-4 flex justify-between items-center">
           {/* Logo */}
           <h1 className="text-3xl font-extrabold text-white tracking-wide">
-            My<span className="text-yellow-300">Portfolio</span>
+            My <span className="text-yellow-300">Portfolio</span>
           </h1>
 
           {/* Desktop Navigation */}
