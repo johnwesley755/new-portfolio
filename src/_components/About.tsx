@@ -180,7 +180,7 @@ const About = () => {
               Download Resume
             </motion.a>
             <motion.a
-              href="contact"
+              href="footer"
               className="px-6 py-3 bg-gray-100 hover:bg-gray-200 text-blue-600 font-semibold rounded-lg shadow-sm flex items-center gap-2"
               whileHover={{ scale: 1.05 }}
             >

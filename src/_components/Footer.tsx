@@ -29,7 +29,7 @@ const Footer: React.FC = () => {
   }, []);
 
   return (
-    <footer className="relative bg-black text-white py-16 px-6">
+    <footer className="relative bg-black text-white py-16 px-6" id="footer">
       {/* Footer Content */}
       <div
         ref={footerRef}
