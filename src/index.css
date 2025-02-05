@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+@import "tailwindcss";
+
+*{
+    font-family: "Albert Sans", sans-serif;
+}
+h2,span{
+    font-family: "Bebas Neue", serif;
+    letter-spacing: 0.2rem;
+}
+/* Custom Animations */
+@keyframes gradient {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes scroll-bounce {
+  0%, 100% { transform: translateY(0); opacity: 1; }
+  50% { transform: translateY(1rem); opacity: 0.5; }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-1rem); }
+}
+
+.animate-gradient {
+  background-size: 200% 200%;
+  animation: gradient 6s ease infinite;
+}
+
+.animate-scroll-bounce {
+  animation: scroll-bounce 2s infinite;
+}
+
+.animate-float {
+  animation: float 4s ease-in-out infinite;
+}
+
+/* Custom Tailwind Classes */
+@layer utilities {
+  .perspective-1000 {
+    perspective: 1000px;
+  }
+  
+  .rotate-y-6 {
+    transform: rotateY(6deg);
+  }
+}
+@keyframes grid-pan {
+  0% { background-position: 0% 0%; }
+  100% { background-position: 40px 40px; }
+}
+
+@keyframes border-pulse {
+  0% { opacity: 0; }
+  50% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+.animate-grid-pan {
+  animation: grid-pan 20s linear infinite;
+}
+
+.animate-border-pulse {
+  animation: border-pulse 3s ease-in-out infinite;
+}
+.shadow-neomorphic {
+  box-shadow: 20px 20px 60px #d1d1d1, -20px -20px 60px #ffffff;
+}
+
+.shadow-neomorphic-hover {
+  box-shadow: 25px 25px 50px #c7c7c7, -25px -25px 50px #ffffff;
+}
+
+.shadow-neomorphic-small {
+  box-shadow: 5px 5px 10px #d1d1d1, -5px -5px 10px #ffffff;
+}
+@media (max-width: 767px) {
+  .animate-gradient {
+    animation-duration: 6s;
+  }
+  
+  .animate-scroll-bounce {
+    animation: scroll-bounce-mobile 2s infinite;
+  }
+  
+  @keyframes scroll-bounce-mobile {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(10px); }
+  }
+}
