@@ -4,7 +4,7 @@ import { gsap } from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ArrowDownCircleIcon } from "@heroicons/react/24/outline";
 import BackgroundIcons from "../_components/BackgroundIcons";
-import heroImg from '../assets/john.jpg';
+import heroImg from '../assets/john-2.png';
 const Hero = () => {
   const container = useRef<HTMLDivElement>(null);
   const textRef = useRef<HTMLDivElement>(null);
