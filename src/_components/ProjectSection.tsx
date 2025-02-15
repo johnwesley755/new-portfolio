@@ -21,7 +21,6 @@ const projects = [
       "AI-powered instant video generation with a simple prompt input. Optimized for all devices with a smooth and intuitive user experience.",
     technologies: ["Python", "Flask", "React", "Vite", "Tailwind CSS"],
     github: "https://github.com/johnwesley755/ai-shorts-video",
-    demo: "https://vutoria-bb1e7.web.app/",
     image: screenshotImg,
   },
   {
@@ -61,7 +60,6 @@ const projects = [
       "Developed a community-focused website for managing ward details, applications for electricity and water connections, ward expenses, notifications, and user complaints. Incorporated Firebase for authentication and real-time data handling.",
     technologies: ["HTML", "CSS", "JavaScript", "Firebase"],
     github: "https://github.com/johnwesley755/gram-panchayat",
-    demo: "https://grampanchayat.com",
     image: gramPanchayatImg,
   },
   {
@@ -71,7 +69,6 @@ const projects = [
       "Designed and developed a fully functional music player with an intuitive interface, featuring play/pause functionality, volume control, progress tracking, and playlist management using local storage. Ensured a responsive design to provide seamless usability across devices.",
     technologies: ["HTML", "CSS", "JavaScript"],
     github: "https://github.com/johnwesley755/namma-isai-music",
-    demo: "https://nammaisai.com",
     image: nammaIsaiImg,
   },
 ];
@@ -138,13 +135,16 @@ const ProjectStack = () => {
                 >
                   <FaGithub /> GitHub
                 </a>
-                <a
-                  href={project.demo}
-                  target="_blank"
-                  className="flex items-center gap-2 bg-blue-500 px-4 py-2 rounded-lg text-white hover:bg-blue-400 transition"
-                >
-                  <FaExternalLinkAlt /> Demo
-                </a>
+                {project.demo && (
+                  <a
+                    href={project.demo}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center bg-blue-500 text-white rounded-lg px-4 py-2  hover:text-blue-400 transition-colors"
+                  >
+                    <span className="mr-2">🌐</span> Demo
+                  </a>
+                )}
               </div>
             </div>
           </Draggable>

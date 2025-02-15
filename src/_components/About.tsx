@@ -117,7 +117,7 @@ const About = () => {
         {/* Image Section */}
         <div ref={imageRef} className="relative">
           <motion.div
-            className="relative h-72 md:h-[500px] rounded-[2rem] overflow-hidden border-2 border-gray-200 shadow-lg group"
+            className="relative h-72 md:h-[500px] rounded-[2rem] max-md:mt-20 overflow-hidden border-2 border-gray-200 shadow-lg group"
             whileHover={{ rotate: 2, scale: 1.02 }}
           >
             <motion.img
